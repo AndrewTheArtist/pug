@@ -1,0 +1,27 @@
+html
+    head
+        title= title
+    body
+
+        h2 Insert email to check if valid
+        input(
+            id='iType'
+            type="text"
+            "name"="username"
+            'placeholder'="Enter your email"
+            readonly=false
+            required
+        )
+        br
+        script.
+            function something (iType) {
+                if(iType.includes("@", ".")){
+                    console.log('This email is valid')
+                }else {
+                    console.log('This is not a valid email')
+                }
+            }
+
+        button(onclick="something(document.getElementById('iType').value)")  Check if email valid lol
+
+        h4= message
