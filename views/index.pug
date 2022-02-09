@@ -3,25 +3,25 @@ html
         title= title
     body
 
+
         h2 Insert email to check if valid
-        input(
-            id='iType'
-            type="text"
-            "name"="username"
-            'placeholder'="Enter your email"
-            readonly=false
-            required
-        )
+
+        form(method='POST' action='/')
+            input(placeholder='Insert email here' type='text' name='email')
+            br
+            button(type='submit') Check if email is valid
+
+        h4= message
+
         br
-        script.
+        //script.
             function something (iType) {
-                if(iType.includes("@", ".")){
+                if(iType.includes("@") && iType.includes(".")){
                     console.log('This email is valid')
                 }else {
                     console.log('This is not a valid email')
                 }
             }
 
-        button(onclick="something(document.getElementById('iType').value)")  Check if email valid lol
+        //button(onclick="something(document.getElementById('iType').value)")  Check if email valid
 
-        h4= message
